@@ -7,20 +7,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AiNTs
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
+namespace AiNTs {
+    public class Program {
+        public static void Main( string[] args ) {
+            CreateHostBuilder( args ).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
+        public static IHostBuilder CreateHostBuilder( string[] args ) =>
+            Host.CreateDefaultBuilder( args )
+                .ConfigureWebHostDefaults( webBuilder => {
                     webBuilder.UseStartup<Startup>();
-                });
+                } );
     }
 }
